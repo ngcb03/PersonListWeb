@@ -1,0 +1,716 @@
+{
+	"info": {
+		"_postman_id": "f1ba4dd8-c4e2-4784-a844-e70827de9c68",
+		"name": "Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31100741"
+	},
+	"item": [
+		{
+			"name": "Persons - Find All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "/* {\r\n    \"name\": \"María\",\r\n    \"username\": \"González\",\r\n    \"id_number\": \"50864567\",\r\n    \"age\": 28,\r\n    \"civil_status\": \"Single\",\r\n    \"birthdate\": \"2001-04-12\"\r\n} */\r\n\r\n/* {\r\n  \"name\": \"Juan\",\r\n  \"username\": \"Martínez\",\r\n  \"id_number\": \"1075745657\",\r\n  \"age\": 35,\r\n  \"civil_status\": \"Married\",\r\n  \"id_user\": 2,\r\n  \"birthdate\": \"1989-10-20\"\r\n} */\r\n\r\n/* {\r\n  \"name\": \"Alejandro\",\r\n  \"username\": \"Rodríguez\",\r\n  \"id_number\": \"50769521\",\r\n  \"age\": 40,\r\n  \"civil_status\": \"Free_union\",\r\n  \"id_user\": 3,\r\n  \"birthdate\": \"1982-07-15\"\r\n} */\r\n\r\n/* {\r\n  \"name\": \"Sofía\",\r\n  \"username\": \"López\",\r\n  \"id_number\": \"1081569741\",\r\n  \"age\": 45,\r\n  \"civil_status\": \"Separate\",\r\n  \"id_user\": 4,\r\n  \"birthdate\": \"1979-02-28\"\r\n} */\r\n\r\n/* {\r\n  \"name\": \"Pedro\",\r\n  \"username\": \"Díaz\",\r\n  \"id_number\": \"50784269\",\r\n  \"age\": 60,\r\n  \"civil_status\": \"Widower\",\r\n  \"id_user\": 5,\r\n  \"birthdate\": \"1964-09-03\"\r\n} */\r\n\r\n/* {\r\n  \"name\": \"Laura\",\r\n  \"username\": \"Hernández\",\r\n  \"id_number\": \"1081693574\",\r\n  \"age\": 31,\r\n  \"civil_status\": \"Single\",\r\n  \"id_user\": 6,\r\n  \"birthdate\": \"1992-12-07\"\r\n} */\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicolas Gabriel\",\r\n    \"lastname\": \"Camargo Buelvas\",\r\n    \"age\": 20,\r\n    \"civil_status\": \"SINGLE\"\r\n}\r\n\r\n/* {\r\n    \"name\": \"Persona\",\r\n    \"lastname\": \"Prueba #1\",\r\n    \"age\": 35,\r\n    \"civil_status\": \"MARRIED\"\r\n} */",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/delete/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Find By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Filter By name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/filter?filter=name&value=M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "name"
+						},
+						{
+							"key": "value",
+							"value": "M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Filter By Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/filter?filter=username&value=G",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "username"
+						},
+						{
+							"key": "value",
+							"value": "G"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Filter By Age",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/filter?filter=age&value=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "age"
+						},
+						{
+							"key": "value",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Filter By Id Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/filter?filter=id_number&value=50864567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "id_number"
+						},
+						{
+							"key": "value",
+							"value": "50864567"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Filter By Civil Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/filter?filter=civil_status&value=Married",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "civil_status"
+						},
+						{
+							"key": "value",
+							"value": "Married"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Name Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=name&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "name"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Name Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?sort=name&sort_type=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "name"
+						},
+						{
+							"key": "sort_type",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Username Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=username&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "username"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Username Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=username&sort_type=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "username"
+						},
+						{
+							"key": "sort_type",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Age Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=age&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "age"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Age Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=age&sort_type=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "age"
+						},
+						{
+							"key": "sort_type",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Id Number Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=id_number&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "id_number"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Id Number Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=id_number&sort_type=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "id_number"
+						},
+						{
+							"key": "sort_type",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Civil Status Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=civil_status&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "civil_status"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Civil Status Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=civil_status&sort_type=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "civil_status"
+						},
+						{
+							"key": "sort_type",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort Created At Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=created_at&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "created_at"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort BirthDate Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=birth_date&sort_type=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "birth_date"
+						},
+						{
+							"key": "sort_type",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Sort BirthDate Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/technicaltest/v1/persons/sort?filter=birth_date&sort_type=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"technicaltest",
+						"v1",
+						"persons",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "birth_date"
+						},
+						{
+							"key": "sort_type",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
